@@ -1,28 +1,31 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
-/* more headers go there */
- /* betty style for function main goes tere */
-/* return 0 (success) */
+/* more headers goes there */
+/**
+ * main - generates random numbers,delcares + OR -
+ *
+ * Return: 1, if succesful
+ */
 int main(void)
 {
 	int n;
 
+	/*code generates random number*/
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* the main code starts here */
 	if (n > 0)
 	{
-		printf("%d is positive \n", n);
-				}
-				else if (n == 0)
-				{
-				printf("%d is zero \n", n);
-				}
-	else
+		printf("%d is positive\n", n);
+	}
+	if (n < 0)
 	{
-		printf("%d is negative \n", n);
+		printf("%d is negative\n", n);
+	}
+	if (n == 0)
+	{
+		printf("%d is zero\n", n);
 	}
 	return (0);
 }
+
